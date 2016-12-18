@@ -8,16 +8,21 @@
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
 </head>
 <body>
+  <!--
   <header>
-      <a href="{{site.baseurl}}/"><div class="home"></div></a>
+      <a href="{{site.baseurl}}/"></a>
   </header>
+  -->
 
   {{ content }}
 
 <footer>
     <div class="links">
-        <a href="{{site.baseurl}}/about/">About</a>
-        <a href="{{site.baseurl}}/contact/">Contact</a>
+      {% for my_page in site.pages %}
+        {% if my_page.title %}
+          <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+        {% endif %}
+      {% endfor %}
     </div>
 </footer>
 {% include analytics.html %}
