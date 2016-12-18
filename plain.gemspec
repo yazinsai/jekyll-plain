@@ -2,9 +2,9 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "plain"
-  spec.version       = "0.1.0"
-  spec.authors       = ["rock"]
-  spec.email         = ["yazin@whitepayments.com"]
+  spec.version       = "0.1.1"
+  spec.authors       = ["yazin"]
+  spec.email         = ["hi@yaz.in"]
 
   spec.summary       = "Plain and simple - Jekyll theme"
   spec.homepage      = "http://yaz.in/"
