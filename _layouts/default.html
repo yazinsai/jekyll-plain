@@ -1,31 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <link href="https://fonts.googleapis.com/css?family=Lato:900|Work+Sans" rel="stylesheet">
-  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-</head>
+{% include head.html %}
 <body>
-  <!--
-  <header>
-      <a href="{{site.baseurl}}/"></a>
-  </header>
-  -->
+{% include header.html %}
 
   {{ content }}
 
-<footer>
-    <div class="links">
-      {% for my_page in site.pages %}
-        {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-        {% endif %}
-      {% endfor %}
-    </div>
-</footer>
-{% include analytics.html %}
+{% include footer.html %}
 
 </body>
 </html>
