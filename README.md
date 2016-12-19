@@ -2,6 +2,11 @@
 
 Plain and simple!
 
+## Features
+
+- Supports `body-class` frontmatter out of the box, in both posts/pages and in the layouts (in that order). Anything you put in there gets loaded in `<body class="...">`
+- Supports `main-menu` for pages -- if you add `main-menu: true`, it'll get added directly to the site header
+
 ## Installation
 
 Add this line to your Jekyll site's Gemfile:
