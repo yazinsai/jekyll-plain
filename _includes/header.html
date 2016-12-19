@@ -1,1 +1,9 @@
-<!-- TODO: add header -->
+<header> 
+  <div class="links"> 
+  {% for my_page in site.pages %}
+    {% if my_page.title and my_page.main_menu %} 
+      <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+    {% endif %}
+  {% endfor %}
+  </div>
+</header>
