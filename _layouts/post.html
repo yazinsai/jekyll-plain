@@ -1,6 +1,9 @@
 ---
 layout: default
 ---
-<h1 class="post-headline">{{page.title}}</h1>
+{% if page.title %}
+  <h1 class="post-headline">{{ page.title }}</h1>
+{% endif %}
+
 <div class="meta"><span>{{page.date | date: '%B %d, %Y'}}</span></div>
 {{content}}
